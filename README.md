@@ -1,6 +1,6 @@
 ![prismejs_logo](https://user-images.githubusercontent.com/3238312/32701237-2ba0912e-c7d2-11e7-9236-8c397528ad44.png)
 
-### PrismeJS | A presentation and transformation layer for complex/dirty API's data output
+### PrismeJS — A presentation and transformation layer for complex/dirty API's data output.
 
 
  * Author — Thomas Brodusch
@@ -21,6 +21,8 @@ or
 npm install prismejs
 ```
 
+***Have a look on `examples/` or `test/`for more explanations !***
+You can also `npm run examples` to watch PrismeJS in action.
 
 **2. Use it in your code like a charm**
 ```javascript

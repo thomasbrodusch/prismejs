@@ -2,12 +2,16 @@
 * Presentation and transformation layer for complex/dirty API's data output.
 *
 * @author Thomas Brodusch
-* @version  1.0.0
+* @version  1.0.1
  */
 
 export default class Prismejs {
     constructor(type = 'json') {
-        this.availableReturnTypes = ['json'];
+        this.config = {
+            version: '1.0.1',
+            availableReturnTypes: ['json']
+        };
+
         this.setReturnType(type);
         this.grammar = {
             regex: /\.|\:|(\[.*\])/g,
@@ -21,7 +25,7 @@ export default class Prismejs {
 
     setReturnType(type) {
         try {
-            if (this.availableReturnTypes.includes(type)) {
+            if (this.config.availableReturnTypes.includes(type)) {
                 this.returnType = type;
             } else {
                 throw new Error('InvalidReturnType');

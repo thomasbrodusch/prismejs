@@ -1,6 +1,6 @@
 {
     "name": "PrismeJS",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description":
         "Presentation and transformation layer for complex/dirty API's data output.",
     "main": "src/index.js",

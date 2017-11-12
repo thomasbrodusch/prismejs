@@ -1,6 +1,6 @@
 
 # PrismeJS
-### Presentation and transformation layer for api's complex data output.
+### Presentation and transformation layer for complex/dirty API's data output
 
 
  * Author — Thomas Brodusch

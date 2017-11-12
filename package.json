@@ -1,9 +1,9 @@
 {
-    "name": "PrismeJS",
-    "version": "1.0.1",
+    "name": "prismejs",
+    "version": "1.0.5",
     "description":
         "Presentation and transformation layer for complex/dirty API's data output.",
-    "main": "src/index.js",
+    "main": "./lib/prismejs.js",
     "scripts": {
         "build": "webpack --env build",
         "dev": "webpack --progress --colors --watch --env dev",

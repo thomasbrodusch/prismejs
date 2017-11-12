@@ -1,0 +1,23 @@
+{
+	"name": "PrismeJS",
+	"version": "1.0.0",
+	"description":
+		"Presentation and transformation layer for api's complex data output",
+	"main": "src/index.js",
+	"scripts": {
+		"test": ""
+	},
+	"keywords": [
+		"prismejs",
+		"prisme",
+		"api",
+		"fractal",
+		"transformation layer",
+		"data",
+		"output",
+		"format"
+	],
+	"repository": "https://github.com/tom4dev/prismejs",
+	"author": "Thomas Brodusch <brodusch.thomas@gmail.com>",
+	"license": "MIT"
+}

@@ -1,0 +1,45 @@
+{
+    "name": "PrismeJS",
+    "version": "1.0.1",
+    "description":
+        "Presentation and transformation layer for complex/dirty API's data output.",
+    "main": "src/index.js",
+    "scripts": {
+        "build": "webpack --env build",
+        "dev": "webpack --progress --colors --watch --env dev",
+        "test": "mocha --require babel-core/register --colors ./test/*.spec.js",
+        "test:watch":
+            "mocha --require babel-core/register --colors -w ./test/*.spec.js",
+        "examples": "babel-node ./examples/demo.js"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "chai": "^4.1.2",
+        "mocha": "^4.0.1",
+        "webpack": "^3.8.1"
+    },
+    "keywords": [
+        "prismejs",
+        "prisme",
+        "api",
+        "fractal",
+        "transformation layer",
+        "data",
+        "output",
+        "format"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tom4dev/prismejs.git"
+    },
+    "author": "Thomas Brodusch <brodusch.thomas@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/tom4dev/prismejs/issues"
+    },
+    "homepage": "https://github.com/tom4dev/prismejs",
+    "dependencies": {
+        "babel-loader": "^7.1.2"
+    }
+}

@@ -5,10 +5,10 @@
 * @version  1.0.1
  */
 
-export default class Prismejs {
+export class Prismejs {
     constructor(type = 'json') {
         this.config = {
-            version: '1.0.1',
+            version: '1.0.5',
             availableReturnTypes: ['json']
         };
 

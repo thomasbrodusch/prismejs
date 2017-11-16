@@ -2,14 +2,14 @@
 * Presentation and transformation layer for complex/dirty API's data output.
 *
 * @author Thomas Brodusch
-* @version  1.0.1
+* @version  1.0.6
  */
 
-export class Prismejs {
-    constructor(type = 'json') {
+export default class Prismejs {
+    constructor(type = "json") {
         this.config = {
-            version: '1.0.5',
-            availableReturnTypes: ['json']
+            version: "1.0.6",
+            availableReturnTypes: ["json"]
         };
 
         this.setReturnType(type);
@@ -17,8 +17,8 @@ export class Prismejs {
             regex: /\.|\:|(\[.*\])/g,
             regexObjectSeparator: /\./g,
             regexPropCheck: /(.*?):(.*)(\[(.*)\])?/g,
-            objectSeperator: '.', // data['toto']  > data.toto
-            propCheck: ':', // data['toto'] = 'tata' > data.toto:tata
+            objectSeperator: ".", // data['toto']  > data.toto
+            propCheck: ":", // data['toto'] = 'tata' > data.toto:tata
             endValue: /\[(.*?)\]/g // data['toto'].value  > data.toto[tata]
         };
     }
@@ -28,7 +28,7 @@ export class Prismejs {
             if (this.config.availableReturnTypes.includes(type)) {
                 this.returnType = type;
             } else {
-                throw new Error('InvalidReturnType');
+                throw new Error("InvalidReturnType");
             }
         } catch (err) {
             console.warn(
@@ -43,7 +43,7 @@ export class Prismejs {
 
     format(source, modelObject) {
         let formattedData;
-        if (this.returnType === 'json') {
+        if (this.returnType === "json") {
             formattedData = this.formatJSON(source, modelObject);
         }
         return formattedData;
@@ -77,7 +77,7 @@ export class Prismejs {
     formatJSONProp(sourceElem, prop) {
         let formattedProp = null;
 
-        if (typeof prop === 'string') {
+        if (typeof prop === "string") {
             formattedProp = sourceElem[prop];
 
             // Check if current string prop contain Prisme grammar.
@@ -90,7 +90,7 @@ export class Prismejs {
             }
         }
 
-        if (typeof prop === 'object') {
+        if (typeof prop === "object") {
             formattedProp = this.formatJSONObject(sourceElem, prop);
         }
 
@@ -131,7 +131,7 @@ export class Prismejs {
                         while (i < buildSource.length || found) {
                             if (
                                 buildSource[i][item] ===
-                                finalVar[1].replace(this.grammar.endValue, '')
+                                finalVar[1].replace(this.grammar.endValue, "")
                             ) {
                                 if (endValue) {
                                     return (finalValue =
@@ -148,7 +148,7 @@ export class Prismejs {
                 });
             } else if (pathItem.match(this.grammar.endValue)) {
                 let m = this.grammar.endValue.exec(pathItem);
-                finalValue = sourceElem[pathItem.replace(m[0], '')][m[1]];
+                finalValue = sourceElem[pathItem.replace(m[0], "")][m[1]];
             }
         });
         return finalValue;
